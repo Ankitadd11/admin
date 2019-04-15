@@ -89,3 +89,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('IB_PORTAL_URL', "http://localhost/instant-booking-v1/portal/");
 define('SERVICE_IMAGE_PATH', "assets/images/service/");
 define('LOCAL_SERVICE_IMAGE_PATH', "./assets/images/uploads");
+define('DEFAULT_IMAGE', "assets/images/default.png");

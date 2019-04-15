@@ -29,4 +29,23 @@ class Service extends Common{
     	$data = array_merge($PostData, $data);
     	$this->db->insert($this->ServiceTbl, $data);
     }
+
+    // select single row value of service
+    public function Select( $id ) {
+    	return $this->db->where("service_type_id", $id)->get($this->ServiceTbl)->result_array()[0]; 
+    }
+
+    // update records in database 
+    public function update( $filePath, $data ) {
+    	$data["Status"] = isset($data["Status"]) ? 1 : 0;
+    	$setDataArr = array( "service_type_title" => $data['service_type_title'],"service_type_description" => $data['service_type_description'],"status" => $data['Status'] , "updatedat" => date("Y-m-d H:i:s") );
+
+    	if(!empty($filePath))  $setDataArr["image_path"] = $filePath;
+    	 $this->db->where('service_type_id', $data["service_type_id"]);
+         $this->db->update($this->ServiceTbl, $setDataArr);
+    }
+
+    public function UpdateStatus( $id, $status ) {
+        $this->db->set('status',$status,false)->where('service_type_id', $id)->update($this->ServiceTbl);
+    }
  }

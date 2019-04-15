@@ -34,8 +34,8 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Serivce <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url()?>services/list">Service List</a></li>
-                      <li><a href="<?php echo base_url()?>services/add">Add Service</a></li>
+                      <li><a href="<?php echo base_url()?>services">Service List</a></li>
+                      <!-- <li><a href="<?php echo base_url()?>services/add">Add Service</a></li> -->
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Categories <span class="fa fa-chevron-down"></span></a>

@@ -15,9 +15,9 @@ class Services extends BaseController {
     }
 
     // display the list of services 
-    public function list() {
+    public function index() {
         $data = array();
-
+         $data["action"] = "list";
         $data["ServiceData"] = json_encode( $this->Service->listData() );
         $this->template->load('template','services/index',$data);
         $this->load->view("templates/datatable_js_scripts");
@@ -27,17 +27,48 @@ class Services extends BaseController {
     // add service type
     public function add() {
         $data = array();
+        $data["action"] = "services/add";
+        $data["PageTitle"] = "Add";
         if($this->input->method() == "post") {
             $filePath = $this->uploadImageInPortal( $_FILES );
             $this->Service->insert($filePath,$this->input->post() );
+            redirect("services");
         } else {
             $this->template->load('template','services/add',$data);  
         }   
          
     }
 
+    // edit the service type
     public function edit( $id = null) {
-        print_r($id);exit();
+        $data["action"] = "services/edit";
+        $data["PageTitle"] = "Edit";
+        
+        if($this->input->method() == "post") {
+            $data = $this->input->post();
+            $filePath = "";
+            if(isset($_FILES["image_path"]["tmp_name"]) && !empty($_FILES["image_path"]["tmp_name"])) {
+              $filePath =  $this->uploadImageInPortal( $_FILES );
+            }
+
+            $this->Service->update( $filePath,$data );
+            redirect("services");
+        } else {
+            $data["Service"] = $this->Service->Select( $id );
+            $this->template->load('template','services/add',$data);  
+        }  
+    }
+
+    public function view($id = null) {
+        $data["action"] = "services/view";
+        $data["PageTitle"] = "View";
+         $data["Service"] = $this->Service->Select( $id );
+         $this->template->load('template','services/view',$data);  
+    }
+
+    public function StatusUpdate($id = null,  $status = null) {
+        $this->Service->UpdateStatus( $id, $status );
+        redirect("services");
     }
 
     // upload the service image
@@ -51,12 +82,13 @@ class Services extends BaseController {
         $config['max_height'] = '4096';
         $config['overwrite'] = FALSE;
          $this->load->library('upload', $config);
-
+         
         if (!$this->upload->do_upload("image_path")){
              $error = array('error' => $this->upload->display_errors());
              json_encode($error);exit();
         }else{
             return LOCAL_SERVICE_IMAGE_PATH."/".$_FILES["image_path"]["name"];
+            print_r($fileData);exit();
         }
     }
 
