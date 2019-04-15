@@ -24,7 +24,7 @@ class Services extends BaseController {
         
     }
 
-    // add service type
+    // add service types
     public function add() {
         $data = array();
         $data["action"] = "services/add";
@@ -39,7 +39,7 @@ class Services extends BaseController {
          
     }
 
-    // edit the service type
+    // edit the service types
     public function edit( $id = null) {
         $data["action"] = "services/edit";
         $data["PageTitle"] = "Edit";
@@ -59,6 +59,7 @@ class Services extends BaseController {
         }  
     }
 
+    // view the selected service type data
     public function view($id = null) {
         $data["action"] = "services/view";
         $data["PageTitle"] = "View";
@@ -66,6 +67,7 @@ class Services extends BaseController {
          $this->template->load('template','services/view',$data);  
     }
 
+    // update the status 
     public function StatusUpdate($id = null,  $status = null) {
         $this->Service->UpdateStatus( $id, $status );
         redirect("services");
