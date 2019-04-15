@@ -21,3 +21,9 @@
 <link href="<?php echo base_url(); ?>assets/css/extra/switchery.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/custom.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/animate.min.css" rel="stylesheet">
+    <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datatables/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+    	var BASE_URL = "<?php echo base_url();?>";
+    </script>

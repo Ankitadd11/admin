@@ -17,42 +17,23 @@
                       <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Salary</th>
-                          <th>Action</th>
+                          <th class="col-md-2">Service Type</th>
+                          <th class="col-md-2">Description</th>
+                          <th class="col-md-1">Status</th>
+                          <th class="col-md-2">Logo</th>
+                          <th class="col-md-5">Action</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>$320,800</td>
-                          <td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                      <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                      <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a></td>
-                        </tr>
-                        <tr>
-                          <td>Garrett Winters</td>
-                          <td>Accountant</td>
-                          <td>$170,750</td>
-                          <td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                      <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                      <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a></td>
-                        </tr>
-                        <tr>
-                          <td>Ashton Cox</td>
-                          <td>Junior Technical Author</td>
-                          <td>$86,000</td>
-                          <td>
-                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                      <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                      <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a></td>
-                        </tr>
+                      <tbody id="ListHtmlData">
+                       
                       </tbody>
                     </table>
                   </div>
       </div>
     </div>
   </div>
- 
+  
+  <script type="text/javascript">
+      var ServiceListData = '<?php echo $ServiceData; ?>';
+  </script>
+  <script src="<?php echo base_url(); ?>assets/filejs/service.js?ssvs"></script>

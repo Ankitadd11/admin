@@ -17,8 +17,11 @@ class Services extends BaseController {
     // display the list of services 
     public function list() {
         $data = array();
+
+        $data["ServiceData"] = json_encode( $this->Service->listData() );
         $this->template->load('template','services/index',$data);
         $this->load->view("templates/datatable_js_scripts");
+        
     }
 
     // add service type
@@ -30,6 +33,11 @@ class Services extends BaseController {
         } else {
             $this->template->load('template','services/add',$data);  
         }   
+         
+    }
+
+    public function edit( $id = null) {
+        print_r($id);exit();
     }
 
     // upload the service image

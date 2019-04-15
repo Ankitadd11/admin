@@ -5,7 +5,7 @@
     <link href="<?php echo base_url(); ?>assets/css/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/datatables/responsive.bootstrap.min.css" rel="stylesheet">
  
-    <script src="<?php echo base_url(); ?>assets/js/datatables/jquery.dataTables.min.js"></script>
+   
     <script src="<?php echo base_url(); ?>assets/js/datatables/dataTables.bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/datatables/dataTables.buttons.min.js"></script>
     <!-- <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script> -->

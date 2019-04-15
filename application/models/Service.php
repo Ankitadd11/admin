@@ -16,6 +16,11 @@ class Service extends Common{
        $this->ServiceTbl = 'provider-service-types';
     }
 
+    // get all the service type datta
+    public function listData() {
+       return $this->db->get($this->ServiceTbl)->result_array(); 
+    }
+
     // insert into database
     public function insert($filepath, $data ) {
     	$PostData = $this->getTransactionDetails();
