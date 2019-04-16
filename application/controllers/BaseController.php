@@ -14,6 +14,25 @@ class BaseController extends CI_Controller {
     }
 	
 
+    // upload the images in folder
+      public function uploadImageInPortal( $fileData, $imgFolderPath ) {
+        $config = array();
+        $config['upload_path'] = $imgFolderPath ;
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size'] = '1024000';
+        $config['max_width'] = '4096';
+        $config['max_height'] = '4096';
+        $config['overwrite'] = FALSE;
+         $this->load->library('upload', $config);
+         
+        if (!$this->upload->do_upload("image_path")){
+             $error = array('error' => $this->upload->display_errors());
+             json_encode($error);exit();
+        }else{
+            return $imgFolderPath."/".$_FILES["image_path"]["name"];
+        }
+    }
+
 	public function index() {
 		
 	}

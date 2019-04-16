@@ -3,7 +3,7 @@
   <div class="right_col" role="main">
      <div class="page-title">
               <div class="title_left">
-                <div class="fa-hover col-md-3 col-sm-4 col-xs-12"><a href="<?php echo base_url().'services/add'?>" class="btn btn-primary"> <i class="fa fa-plus-circle"></i>  Add Service</a>
+                <div class="fa-hover col-md-3 col-sm-4 col-xs-12"><a href="<?php echo base_url().'events/add'?>" class="btn btn-primary"> <i class="fa fa-plus-circle"></i>  Add Event Type</a>
                 </div>
               </div>
               <!-- <div class="title_right">
@@ -33,16 +33,15 @@
                       <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th class="col-md-2">Service Type</th>
-                          <th class="col-md-2">Description</th>
-                          <th class="col-md-1">Status</th>
+                          <th class="col-md-2">event title</th>
+                          <th class="col-md-1">event_description</th>
+                          <th class="col-md-2">Parent event</th>
                           <th class="col-md-2">Logo</th>
-                          <th class="col-md-5">Action</th>
+                          <th class="col-md-1">Status</th>
+                          <th class="col-md-6">Action</th>
                         </tr>
                       </thead>
-                      <tbody id="ListHtmlData">
-                       
-                      </tbody>
+                      <tbody id="ListHtmlData"> </tbody>
                     </table>
                   </div>
       </div>
@@ -51,6 +50,6 @@
   
   <script type="text/javascript">
     var action = "<?php echo $action; ?>";
-    var ServiceListDataObj = <?=  $ServiceData; ?>;
+    var EventTypeJson = <?=  $EventData; ?>;
   </script>
-  <script src="<?php echo base_url(); ?>assets/filejs/service.js?ssvs"></script>
+  <script src="<?php echo base_url(); ?>assets/filejs/events.js?ssvs"></script>

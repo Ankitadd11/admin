@@ -3,13 +3,13 @@
     $service_type_title = isset($Service["service_type_title"]) ? $Service["service_type_title"] : "";
     $service_type_description = isset($Service["service_type_description"]) ? $Service["service_type_description"] : "";
     $Status = (isset($Service["status"]) && $Service["status"] == 1) ? "checked" : "unchecked";
-    $image_path = isset($Service["image_path"]) ? $Service["image_path"] : DEFAULT_IMAGE;
+    $image_path = (isset($Service["image_path"]) && !empty($Service["image_path"])) ? $Service["image_path"] : DEFAULT_IMAGE;
   ?>
 <div class="right_col" role="main">
   <div class="">
     <div class="page-title">
       <div class="title_left"><h3><?php echo $PageTitle; ?> Serivce Type</h3></div>
-      <div class="title_right">
+      <!-- <div class="title_right">
         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for...">
@@ -18,7 +18,7 @@
             </span>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="clearfix"></div>
     <div class="row">

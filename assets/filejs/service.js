@@ -1,6 +1,5 @@
 /*listing code */
 if(action == "list") {
-    var ServiceListDataObj = JSON.parse( ServiceListData );
     // create html for service listing dynamically
     generateListTableHtml( ServiceListDataObj );
 }
@@ -43,9 +42,6 @@ if(action == "list") {
 
 
 /** Add & edit service changes**/
-
-
-
 function displayImg(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();

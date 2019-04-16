@@ -7,7 +7,7 @@
            <div class="fa-hover col-md-3 col-sm-4 col-xs-12"><a href="<?php echo base_url().'categories/add'?>" class="btn btn-primary"> <i class="fa fa-plus-circle"></i>  Add Category</a></div>
         </div>
 
-        <div class="title_right">
+        <!-- <div class="title_right">
           <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search for...">
@@ -16,7 +16,7 @@
               </span>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>      
       <div class="clearfix"></div>
       <div class="row">
@@ -57,6 +57,6 @@
  
   <script type="text/javascript">
     var action = "<?php echo $action; ?>";
-      var CategoryData = '<?php echo $CategoryData; ?>';
+      var CategoryDataObj = <?=  $CategoryData; ?>;
   </script>
   <script src="<?php echo base_url(); ?>assets/filejs/category.js?sssvs"></script>
