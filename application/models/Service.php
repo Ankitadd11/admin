@@ -8,8 +8,8 @@
 **/
 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-include('Common.php');
-class Service extends Common{
+
+class Service extends CI_Model {
 
    function __construct(){
       parent::__construct();
@@ -45,7 +45,22 @@ class Service extends Common{
          $this->db->update($this->ServiceTbl, $setDataArr);
     }
 
+    // update status of service in database
     public function UpdateStatus( $id, $status ) {
         $this->db->set('status',$status,false)->where('service_type_id', $id)->update($this->ServiceTbl);
+    }
+
+    // list of active service for categories
+    public function activeServices() {
+        return $this->db->select("service_type_id, service_type_title")->where("status", 1)->get($this->ServiceTbl)->result_array(); 
+    }
+
+     public function getTransactionDetails() {
+        $TrasactionArray = array();
+        $TrasactionArray['createdat'] = date("Y-m-d H:i:s");   
+        $TrasactionArray['updatedat'] = date("Y-m-d H:i:s");  
+        $TrasactionArray['createdby'] = $this->session->userdata['logged_in']['ID'];
+        $TrasactionArray['updatedby'] = $this->session->userdata['logged_in']['ID'];
+        return $TrasactionArray;
     }
  }

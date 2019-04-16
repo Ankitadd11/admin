@@ -3,7 +3,7 @@
   <div class="right_col" role="main">
      <div class="page-title">
               <div class="title_left">
-                <div class="fa-hover col-md-3 col-sm-4 col-xs-12"><a href="<?php echo base_url().'services/add'?>" class="btn btn-primary btn-block"> <i class="fa fa-plus-circle"></i>  Add </a>
+                <div class="fa-hover col-md-3 col-sm-4 col-xs-12"><a href="<?php echo base_url().'services/add'?>" class="btn btn-primary"> <i class="fa fa-plus-circle"></i>  Add Service</a>
                 </div>
               </div>
               <div class="title_right">
@@ -20,7 +20,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
       <div class="x_panel">
                   <div class="x_title">
-                    <h2>Tooltips <small>Hover to view</small></h2>
+                    <!-- <h2>Tooltips <small>Hover to view</small></h2> -->
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
