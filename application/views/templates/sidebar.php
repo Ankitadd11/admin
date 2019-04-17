@@ -41,6 +41,11 @@
                       <li><a href="<?php echo base_url()?>events">Event type list</a></li>
                     </ul>
                   </li>
+                   <li><a><i class="fa fa-users"></i> Provider <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url()?>events">Event type list</a></li>
+                    </ul>
+                  </li>
                   
                 </ul>
               </div>
