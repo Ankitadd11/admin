@@ -33,12 +33,12 @@
                       <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th class="col-md-2">event title</th>
-                          <th class="col-md-1">event_description</th>
+                          <th class="col-md-2">event Title</th>
+                          <th class="col-md-2"> Description</th>
                           <th class="col-md-2">Parent event</th>
                           <th class="col-md-2">Logo</th>
                           <th class="col-md-1">Status</th>
-                          <th class="col-md-6">Action</th>
+                          <th class="col-md-5">Action</th>
                         </tr>
                       </thead>
                       <tbody id="ListHtmlData"> </tbody>

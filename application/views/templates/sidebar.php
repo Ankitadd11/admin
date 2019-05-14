@@ -28,7 +28,6 @@
                   <li><a><i class="fa fa-edit"></i> Service <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo base_url()?>services">Service List</a></li>
-                      <!-- <li><a href="<?php echo base_url()?>services/add">Add Service</a></li> -->
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Categories <span class="fa fa-chevron-down"></span></a>
@@ -43,7 +42,7 @@
                   </li>
                    <li><a><i class="fa fa-users"></i> Provider <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url()?>events">Event type list</a></li>
+                      <li><a href="<?php echo base_url()?>providers">Provider list</a></li>
                     </ul>
                   </li>
                   

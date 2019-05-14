@@ -1,2 +1,12 @@
 .image-height{ height: 75px; }
 .image-height-50{ height: 50px; }
+.row-margin-lr-0{ margin-right: 0px !important;margin-left: 0px !important; }
+.accordion_sub_label{background: #efefef;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 1px;}
+
+ .margin-1{
+ 	margin: 1px;
+ }
