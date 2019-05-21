@@ -35,7 +35,7 @@ function  generateHtmlData( JSonData ) {
    function actionButtons(ProviderID, Status) {
         var BtnStr = "";
         BtnStr += '<a href="'+BASE_URL+'providers/view/'+ProviderID+'" class="btn btn-primary btn-xs provider-view" data-id="'+ProviderID+'"><i class="fa fa-folder"></i> View </a>';
-        BtnStr += '<a href="'+BASE_URL+'providers/edit/'+ProviderID+'" class="btn btn-info btn-xs" data-id="'+ProviderID+'"><i class="fa fa-pencil"></i> Edit </a>';
+        // BtnStr += '<a href="'+BASE_URL+'providers/edit/'+ProviderID+'" class="btn btn-info btn-xs" data-id="'+ProviderID+'"><i class="fa fa-pencil"></i> Edit </a>';
 
         var Class = ( Status == 1 ) ? "btn-danger" : "btn-success";
         var BtnText = ( Status == 1 ) ? '<i class="fa fa-close"></i> Inactive' : '<i class="fa fa-check"></i> Active';

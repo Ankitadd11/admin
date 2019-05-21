@@ -29,8 +29,8 @@
                         </li>
                         <li role="presentation" class=""><a href="#ProfileTab" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Profile</a>
                         </li>
-                        <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Profile</a>
-                        </li>
+                        <!-- <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Profile</a>
+                        </li> -->
                       </ul>
                       <div id="myTabContent" class="tab-content">
                         <div role="tabpanel" class="tab-pane fade active in " id="BusinessTab" aria-labelledby="home-tab">

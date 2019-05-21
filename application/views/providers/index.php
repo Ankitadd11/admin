@@ -35,4 +35,6 @@
     var action = "<?php echo $action; ?>";
     var ProviderDataJson = <?=  $ProviderData; ?>;
   </script>
-  <script src="<?php echo base_url(); ?>assets/filejs/provider.js"></script>
+  <script src="<?php echo base_url(); ?>assets/filejs/provider.js?d"></script>
+
+
